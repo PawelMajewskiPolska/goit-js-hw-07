@@ -15,17 +15,16 @@ const addGallery = galleryItems
 
 newGallery.insertAdjacentHTML("beforeend", addGallery);
 
-newGallery.addEventListener("click", showBigImage);
-
 function showBigImage(event) {
 	event.preventDefault();
 	if (event.target.nodeName !== "IMG") {
 		return;
 	}
-	const lightbox = new SimpleLightbox(".gallery a", {
-		caption: true,
-		captionPosition: "bottom",
-		captionsData: "alt",
-		captionDelay: 250,
-	});
 }
+
+const lightbox = new SimpleLightbox(".gallery a", {
+	caption: true,
+	captionPosition: "bottom",
+	captionsData: "alt",
+	captionDelay: 250,
+});
